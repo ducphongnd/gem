@@ -42,7 +42,7 @@ export default function ValueStepper() {
   const step = 1; 
 
   const handleIncrement = () => {
-    let numValue = parseFloat(inputValue) || 0;
+    const numValue = parseFloat(inputValue) || 0;
     let newValue = numValue + step;
     if (unit === "%" && newValue > 100) {
       newValue = 100;
@@ -51,7 +51,7 @@ export default function ValueStepper() {
   };
 
   const handleDecrement = () => {
-    let numValue = parseFloat(inputValue) || 0;
+    const numValue = parseFloat(inputValue) || 0;
     let newValue = numValue - step;
     if (newValue < 0) {
       newValue = 0;
